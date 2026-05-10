@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Swal from "sweetalert2";
 import * as s from "./styles";
 import { GiCardRandom } from "react-icons/gi";
@@ -21,17 +22,20 @@ function Home() {
             });
             return;
         }
-        navigate("`/game/&{inputValue}`")
+        navigate(`/game/${inputValue}`)
     }
 
     return <>
         <div css={s.layout}>
             <header>
-                <h1><GiCardRandom>CARD MATCHING GAME</GiCardRandom></h1>
+                <h1><GiCardRandom />CARD MATCHING GAME<GiCardRandom /></h1>
             </header>
             <main>
                 <div css={s.usernameInput}>
-                    <input type="text" placeholder="플레이어 이름" value={inputValue} onChange={handleInputOnChange}/>
+                    <input type="text" 
+                    placeholder="플레이어 이름" 
+                    value={inputValue} 
+                    onChange={handleInputOnChange}/>
                 </div>
                 <div css={s.startButton}>
                     <button onClick={handleStartOnClick}>시작하기</button>

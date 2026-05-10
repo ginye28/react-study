@@ -14,11 +14,15 @@ export const layout = css`
     &:hover {
         transform: scale(105%);
     }
+
+    &:active {
+        transform: scale(105%) rotateY(180deg);
+    }
 `;
 
 export const container = css`
     border-radius: 8px;
     width: 100%;
     height: 100%;
-    background-color: #ffbfa8;
+    background-color: #755b51;
 `;

@@ -13,27 +13,23 @@ export const layout = css`
         justify-content: center;
         align-items: center;
         height: 200px;
-
         & > h1 {
+            display: flex;
+            align-items: center;
+            gap: 5px;
             font-size: 50px;
             color: transparent;
             -webkit-text-fill-color: transparent;
-            background: linear-gradient(90deg,rgba(115, 10, 36, 1) 0%, rgba(131, 166, 109, 1) 100%);
-            -webkit-background-clip: text;
+            background: linear-gradient(90deg,rgba(115, 10, 36, 1) 0%, rgba(131, 166, 109, 1) 100%);    
             background-clip: text;
+            -webkit-background-clip: text;
             cursor: default;
 
             & svg:nth-of-type(1) {
-                color: #882431
+                color: #882431;
             }
             & svg:nth-last-of-type(1) {
-                color: #6ca381
-            }
-
-            & > h3 {
-                margin: 0;
-                color: #c5c5c5;
-                cursor: default;
+                color: #6ca381;
             }
         }
     }
@@ -41,9 +37,9 @@ export const layout = css`
     & > main {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 50px;
+        justify-content: center;
+        gap: 40px;
         box-sizing: border-box;
         border-radius: 8px;
         padding: 20px;
@@ -57,29 +53,30 @@ export const usernameInput = css`
     & > input {
         box-sizing: border-box;
         border: none;
-        border-radius: 40px;
+        border-radius: 50px;
         outline: none;
         width: 340px;
-        height: 40px;
+        height: 50px;
         padding: 0 10px;
         text-align: center;
         font-size: 24px;
-        color: c3c3c3;
+        color: #c3c3c3;
         background-color: #272727;
         box-shadow: 0 0 10px #5c5c5c55 inset;
         cursor: pointer;
-    }
 
-    &:hover, &:focus {
-        box-shadow: 0 0 10px #9c9c9c55 inset;
-    }
+        &:hover, &:focus {
+            box-shadow: 0 0 10px #9c9c9c55 inset;
+        }
 
-    &::placeholder {
-        color: #c3c3c3;
+        &::placeholder {
+            color: #c3c3c3;
+        }
     }
 `;
 
 export const startButton = css`
+
     & > button {
         border: none;
         width: 340px;
@@ -96,7 +93,7 @@ export const startButton = css`
         }
 
         &:active {
-            text-shadow: 0 0 10px #a529a5;
+            text-shadow: 0 0 10px #a52954b7;
         }
     }
 `;
