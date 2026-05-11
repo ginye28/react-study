@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Swal from "sweetalert2";
 import * as s from "./styles";
 import { GiCardRandom } from "react-icons/gi";
+import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
 
 function Home() {
@@ -13,12 +13,13 @@ function Home() {
     }
 
     const handleStartOnClick = () => {
-        
+
+
         if (!inputValue.trim()) {
             setInputValue("");
             Swal.fire({
                 title: "게임 시작 실패",
-                text: "게임을 시작하려면 이름을 입력하세요",
+                text: "게임을 시작하려면 이름을 입력하세요.",
                 icon: "warning"
             });
             return;
@@ -27,31 +28,31 @@ function Home() {
         fetch("http://localhost:8080/api/users", {
             method: "post",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "aplication/json",
             },
             body: JSON.stringify({
                 username: inputValue,
-            }).then(Response => {
-                Response.json().then(
-                    json => console.log(json)
-                )
             })
+        }).then(response => {
+            response.json().then(
+                json => console.log(json)
+            )
         });
 
-        navigate(`/game/${inputValue}`)
+        navigate(`/game/${inputValue}`);
     }
 
     return <>
         <div css={s.layout}>
             <header>
-                <h1><GiCardRandom />CARD MATCHING GAME<GiCardRandom /></h1>
+                <h1><GiCardRandom />CARD MATCING GAME<GiCardRandom /></h1>
             </header>
             <main>
                 <div css={s.usernameInput}>
                     <input type="text" 
-                    placeholder="플레이어 이름" 
-                    value={inputValue} 
-                    onChange={handleInputOnChange}/>
+                        placeholder="플레이어 이름" 
+                        value={inputValue} 
+                        onChange={handleInputOnChange}/>
                 </div>
                 <div css={s.startButton}>
                     <button onClick={handleStartOnClick}>시작하기</button>
