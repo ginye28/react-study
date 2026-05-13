@@ -10,7 +10,7 @@ function P1() {
     }
 
     const getPromise2 = (value) => {
-    return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             console.log("2: " + value);
             resolve(value)
         });

@@ -7,6 +7,7 @@ function App() {
     } else {
       reject(new Error("실패데이터"));
     }
+    
     //리졸브가 then의 함수 호출, 리졸브가 없으면 호출 안 됨
     // resolve();
     //resoleve나 reject가 하나만 있어야 함
