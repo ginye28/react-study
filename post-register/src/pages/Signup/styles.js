@@ -26,3 +26,35 @@ export const header = css`
         }
     }
 `;
+
+export const agree = css`
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 400;
+`;
+
+export const signupButton = css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f2f1e3;
+    }
+
+    &:active {
+        background-color: #e9e8da;
+        transform: scale(97%);
+    }
+`;

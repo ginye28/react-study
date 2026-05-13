@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import * as s from "./styles";
-import TextInput from "../../components/Textinput/TextInput";
+import TextInput from "../../components/TextInput/TextInput";
 import PasswordInput from "../../components/PasswordInput/PasswordInput";
 import { BiUserPlus } from "react-icons/bi";
 
@@ -14,20 +14,20 @@ function Signup() {
             </div>
             <div>
                 <div>
-                    <TextInput title={"이름"} name={"fullName"}/>
+                    <TextInput title={"이름"} name={"fullName"} />
                 </div>
                 <div>
-                    <TextInput title={"이메일"} name={"fullName"}/>
+                    <TextInput title={"이메일"} name={"fullName"} />
                 </div>
                 <div>
-                    <PasswordInput title={"비밀번호"} name={"fullName"}/>
+                    <PasswordInput title={"비밀번호"} name={"fullName"} />
                 </div>
                 <div>
-                    <PasswordInput title={"비밀번호 확인"} name={"fullName"}/>
+                    <PasswordInput title={"비밀번호 확인"} name={"fullName"} />
                 </div>
                 <div css={s.agree}>
                     <label>
-                        <input type="checkbox" />
+                        <input type="checkbox" /> 
                         이용약관 및 개인정보처리방침에 동의합니다.
                     </label>
                 </div>
