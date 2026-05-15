@@ -1,13 +1,13 @@
-import * as s from "./styles";
-import TextInput from "../../components/Textinput/TextInput"
-import PasswordInput from "../../components/PasswordInput/PasswordInput"
 import { Link, useNavigate } from "react-router";
+import PasswordInput from "../../components/PasswordInput/PasswordInput"
+import TextInput from "../../components/Textinput/TextInput"
+import * as s from "./styles";
 import { useState } from "react";
 
 function Signin() {
     const navigate = useNavigate();
 
-    const [ InputValues, setInputValues ] = useState({
+    const [ inputValues, setInputValues ] = useState({
         email: "test1234@gmail.com",
         password: "1q2w3e4r!",
     });
@@ -41,7 +41,7 @@ function Signin() {
 
     const handleSigninOnClick = async () => {
         try {
-            const response = await requestSignin(InputValues.email, InputValues.password);
+            const response = await requestSignin(inputValues.email, inputValues.password);
             localStorage.setItem("accessToken", response.data.accessToken);
             navigate("/", {
                 replace: true,
@@ -61,8 +61,8 @@ function Signin() {
     return (
         <div>
             <Link to={"/auth/signup"} >회원가입</Link>
-            <TextInput title={"이메일"} name={"eamil"} value={InputValues.email} onChange={handleInputOnChange}/>
-            <PasswordInput title={"비밀번호"} name={"password"} value={InputValues.password} onChange={handleInputOnChange}/>
+            <TextInput title={"이메일"} name={"email"} value={inputValues.email} onChange={handleInputOnChange}/>
+            <PasswordInput title={"비밀번호"} name={"password"} value={inputValues.password} onChange={handleInputOnChange}/>
             <button onClick={handleSigninOnClick}>로그인</button>
         </div>
     )

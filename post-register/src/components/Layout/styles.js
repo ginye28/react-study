@@ -16,7 +16,7 @@ transition: all 0.5s ease-in-out;
     box-sizing: border-box;
     border: 1px solid #dbdbdb;
     border-radius: 8px;
-    width: ${size === "full" ? "1000px" : "700px" };
+    width: ${size === "full" ? "1400px" : "700px" };
     height: 700px;
     background-color: #ffffff;
     overflow: hidden;
