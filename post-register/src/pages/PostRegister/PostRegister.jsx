@@ -82,7 +82,10 @@ function PostRegister() {
     const handeSubmitOnClick = () => {
         let posts = JSON.parse(localStorage.getItem("posts"));
         posts = posts ?? [];
+        const ids = posts.map(post => post.id)
+        const newId = Math.max(...ids, 0) + 1;
         const newPost = {
+            "id": newId,
             "title": title,
             "content": value,
             "thumbnail": thumbnail,

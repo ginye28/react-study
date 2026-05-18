@@ -35,16 +35,20 @@ export const postListContainer = css`
 `;
 
 export const card = css`
-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
     flex-grow: 1;
     box-sizing: border-box;
     border: 1px solid #dbdbdb;
     border-radius: 10px;
-    padding: 20px;
     width: 300px;
-    height: 120px;
+    height: 250px;
     background-color: #fff;
+    overflow: hidden;
     cursor: pointer;
+
+    & > div, & > footer {
+        padding: 10px;
+    }
 
     &:hover {
         box-shadow: 0 0 10px 5px #ffffff88;
@@ -53,6 +57,16 @@ transition: all 0.1s ease-in-out;
     &:active {
         transform: scale(96%);
     }
+`;
+
+export const cardThumbnail = (url) => css`
+    width: 100%;
+    height: 100px;
+    background-image: url("${url}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fafafa;
 `;
 
 export const pagination = css`
