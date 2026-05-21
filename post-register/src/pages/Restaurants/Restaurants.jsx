@@ -1,6 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import * as s from "./styles";
 import { useEffect, useState } from "react";
+import * as s from "./styles";
 
 function Restaurants() {
     const [ restaurants, setRestaurants ] = useState([]);
